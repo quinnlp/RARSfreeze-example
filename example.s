@@ -9,7 +9,7 @@
 #	4. Run the program
 #	5. Begin entering characters into the KEYBOARD section
 #
-# RARS should freeze after one or two keypresses.
+# RARS will freeze after one or two keypresses.
 #
 
 
