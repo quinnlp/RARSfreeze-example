@@ -33,12 +33,12 @@ forever:
 	sw	s3, 0(s1)		# DISPLAY_DATA <- 0x00000007
 	
 waitForDisplay2:	
-		#	wait for display to be ready to print '1'
+		#	wait for display to be ready to print '0'
 		lw	t0, 0(s0)		# t0 <- DISPLAY_CONTROL
 		andi	t0, t0, 0x1		# t0 <- 0th bit of DISPLAY_CONTROL
 		beqz	t0, waitForDisplay2	# if (t0 == 0) goto waitForDisplay2
 	
-	#	print '1'
+	#	print '0'
 	sb	s2, 0(s1)		# DISPLAY_DATA <- 0x00000030
 	
 	j	forever			# goto forever
